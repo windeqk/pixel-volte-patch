@@ -1,4 +1,4 @@
-package dev.bluehouse.enablevolte
+package dev.bluehouse.enableims
 
 import android.content.pm.PackageManager
 import android.telephony.SubscriptionInfo
