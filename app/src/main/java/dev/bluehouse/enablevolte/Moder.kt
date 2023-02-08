@@ -183,6 +183,9 @@ class SubscriptionModer(val subscriptionId: Int) : Moder() {
             this.getBooleanValue(CarrierConfigManager.KEY_ENHANCED_4G_LTE_ON_BY_DEFAULT_BOOL) &&
             !this.getBooleanValue(CarrierConfigManager.KEY_HIDE_ENHANCED_4G_LTE_BOOL)
 
+    val isVonrConfigEnabled: Boolean
+        get() = this.getBooleanValue(CarrierConfigManager.KEY_VONR_ENABLED_BOOL)
+
     val isNRConfigEnabled: Boolean
         @RequiresApi(Build.VERSION_CODES.S)
         get() = this.getIntArrayValue(CarrierConfigManager.KEY_CARRIER_NR_AVAILABILITIES_INT_ARRAY)
