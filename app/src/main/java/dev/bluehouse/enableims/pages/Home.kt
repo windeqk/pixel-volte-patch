@@ -1,4 +1,4 @@
-package dev.bluehouse.enablevolte.pages
+package dev.bluehouse.enableims.pages
 
 import android.content.pm.PackageManager
 import android.telephony.SubscriptionInfo

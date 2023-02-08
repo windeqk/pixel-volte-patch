@@ -1,4 +1,4 @@
-package dev.bluehouse.enablevolte.pages
+package dev.bluehouse.enableims.pages
 
 import android.telephony.CarrierConfigManager
 import androidx.compose.foundation.layout.Column
