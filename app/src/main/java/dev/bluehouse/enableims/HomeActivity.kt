@@ -27,9 +27,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import dev.bluehouse.enablevolte.pages.Config
-import dev.bluehouse.enablevolte.pages.Home
-import dev.bluehouse.enablevolte.ui.theme.EnableVoLTETheme
+import dev.bluehouse.enableims.pages.Config
+import dev.bluehouse.enableims.pages.Home
+import dev.bluehouse.enableims.ui.theme.EnableVoLTETheme
 import org.lsposed.hiddenapibypass.HiddenApiBypass
 import rikka.shizuku.Shizuku
 import java.lang.IllegalStateException
@@ -45,12 +45,12 @@ class HomeActivity : ComponentActivity() {
         HiddenApiBypass.addHiddenApiExemptions("I")
 
         setContent {
-            EnableVoLTETheme {
+            EnableIMSTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.surfaceVariant
                 ) {
-                    PixelIMSApp()
+                    AndroidIMSApp()
                 }
             }
         }
@@ -59,7 +59,7 @@ class HomeActivity : ComponentActivity() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun PixelIMSApp() {
+fun AndroidIMSApp() {
     val navController = rememberNavController()
     val carrierModer = CarrierModer(LocalContext.current)
 
@@ -89,13 +89,13 @@ fun PixelIMSApp() {
         if (event == Lifecycle.Event.ON_CREATE) {
             try {
                 if (checkShizukuPermission(0)) {
-                    Log.d(dev.bluehouse.enablevolte.pages.TAG, "Shizuku granted")
+                    Log.d(dev.bluehouse.enableims.pages.TAG, "Shizuku granted")
                     subscriptions = carrierModer.subscriptions
                     navBuilder = generateNavBuilder()
                 } else {
                     Shizuku.addRequestPermissionResultListener { _, grantResult ->
                         if (grantResult == PackageManager.PERMISSION_GRANTED) {
-                            Log.d(dev.bluehouse.enablevolte.pages.TAG, "Shizuku granted")
+                            Log.d(dev.bluehouse.enableims.pages.TAG, "Shizuku granted")
                             subscriptions = carrierModer.subscriptions
                             navBuilder = generateNavBuilder()
                         }
