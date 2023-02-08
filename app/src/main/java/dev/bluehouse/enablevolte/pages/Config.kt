@@ -24,11 +24,13 @@ fun Config(navController: NavController, subId: Int) {
 
     var configurable by rememberSaveable { mutableStateOf(false) }
     var voLTEEnabled by rememberSaveable { mutableStateOf(false) }
+    var voNREnabled by rememberSaveable { mutableStateOf(false) }
     var voWiFiEnabled by rememberSaveable { mutableStateOf(false) }
     var configuredUserAgent by rememberSaveable { mutableStateOf("") }
 
     fun loadFlags() {
         voLTEEnabled = moder.isVolteConfigEnabled
+        voNREnabled = moder.isVonrConfigEnabled
         voWiFiEnabled = moder.isVowifiConfigEnabled
         configuredUserAgent = moder.userAgentConfig
     }
@@ -60,6 +62,16 @@ fun Config(navController: NavController, subId: Int) {
                 false
             } else {
                 moder.updateCarrierConfig(CarrierConfigManager.KEY_CARRIER_VOLTE_AVAILABLE_BOOL, true)
+                moder.restartIMSRegistration()
+                true
+            }
+        }
+        BooleanPropertyView(label = "Enable VoNR", toggled = voNREnabled) {
+            voNREnabled = if (voNREnabled) {
+                moder.updateCarrierConfig(CarrierConfigManager.KEY_VONR_ENABLED_BOOL, false)
+                false
+            } else {
+                moder.updateCarrierConfig(CarrierConfigManager.KEY_VONR_ENABLED_BOOL, true)
                 moder.restartIMSRegistration()
                 true
             }
