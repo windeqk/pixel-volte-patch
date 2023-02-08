@@ -1,4 +1,4 @@
-package dev.bluehouse.enablevolte
+package dev.bluehouse.enableims
 
 import android.content.Context
 import android.content.res.Resources
