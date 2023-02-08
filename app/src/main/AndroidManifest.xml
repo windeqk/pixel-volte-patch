@@ -9,12 +9,12 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.EnableVoLTE"
+        android:theme="@style/Theme.EnableIMS"
         tools:targetApi="31">
         <activity
             android:name=".HomeActivity"
             android:exported="true"
-            android:theme="@style/Theme.EnableVoLTE">
+            android:theme="@style/Theme.EnableIMS">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
