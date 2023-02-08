@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'dev.bluehouse.enablevolte'
+    namespace 'dev.bluehouse.enableims'
     compileSdk 33
 
     defaultConfig {
-        applicationId "dev.bluehouse.enablevolte"
+        applicationId "dev.bluehouse.enableims"
         minSdk 30
         targetSdk 33
         versionCode 5
