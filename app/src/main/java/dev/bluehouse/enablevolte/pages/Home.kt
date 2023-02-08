@@ -67,7 +67,7 @@ fun Home(navController: NavController) {
         BooleanPropertyView(label = "Shizuku Service Running", toggled = shizukuEnabled)
         BooleanPropertyView(label = "Shizuku Permission Granted", toggled = shizukuGranted)
         BooleanPropertyView(label = "SIM Detected", toggled = subscriptions.isNotEmpty())
-        BooleanPropertyView(label = "VoLTE Supported by Device", toggled = deviceIMSEnabled)
+        BooleanPropertyView(label = "IMS Supported by Device", toggled = deviceIMSEnabled)
 
         for (idx in subscriptions.indices) {
             HeaderText(text = "IMS Status for ${subscriptions[idx].uniqueName}")
