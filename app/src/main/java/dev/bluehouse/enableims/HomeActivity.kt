@@ -29,7 +29,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import dev.bluehouse.enableims.pages.Config
 import dev.bluehouse.enableims.pages.Home
-import dev.bluehouse.enableims.ui.theme.EnableVoLTETheme
+import dev.bluehouse.enableims.ui.theme.EnableIMSTheme
 import org.lsposed.hiddenapibypass.HiddenApiBypass
 import rikka.shizuku.Shizuku
 import java.lang.IllegalStateException
