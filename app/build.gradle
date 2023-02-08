@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'dev.bluehouse.enableims'
-    compileSdk 33
+    compileSdkPreview "UpsideDownCake"
 
     defaultConfig {
         applicationId "dev.bluehouse.enableims"
-        minSdk 30
-        targetSdk 33
+        minSdkPreview "UpsideDownCake"
+        targetSdkPreview "UpsideDownCake"
         versionCode 5
         versionName "1.2.0"
 
