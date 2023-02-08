@@ -1,4 +1,4 @@
-package dev.bluehouse.enablevolte.ui.theme
+package dev.bluehouse.enableims.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
