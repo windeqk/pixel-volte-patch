@@ -1,4 +1,4 @@
-package dev.bluehouse.enablevolte
+package dev.bluehouse.enableims
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
