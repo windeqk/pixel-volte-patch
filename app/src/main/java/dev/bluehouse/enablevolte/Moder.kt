@@ -194,6 +194,9 @@ class SubscriptionModer(val subscriptionId: Int) : Moder() {
     val userAgentConfig: String
         get() = this.getStringValue(KEY_IMS_USER_AGENT)
 
+    val overrideCarrierConfig: String
+        get() = this.getStringValue(KEY_CARRIER_NAME_STRING)
+
     val isIMSRegistered: Boolean
         get() {
             val telephony = this.loadCachedInterface { telephony }

@@ -35,4 +35,5 @@
     <string name="confirm">Confirm</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="carrier_config">Carrier Name</string>
 </resources>

@@ -42,6 +42,7 @@ fun Config(navController: NavController, subId: Int) {
     var is4GPlusEnabled by rememberSaveable { mutableStateOf(false) }
     var voNREnabled by rememberSaveable { mutableStateOf(false) }
     var configuredUserAgent by rememberSaveable { mutableStateOf("") }
+    var configuredCarrierConfig by rememberSaveable { mutableStateOf("") }
 
     fun loadFlags() {
         voLTEEnabled = moder.isVolteConfigEnabled
@@ -52,6 +53,7 @@ fun Config(navController: NavController, subId: Int) {
         is4GPlusEnabled = moder.is4GPlusEnabled
         voNREnabled = moder.isVonrConfigEnabled
         configuredUserAgent = moder.userAgentConfig
+        configuredCarrierConfig = moder.overrideCarrierConfig
     }
 
     OnLifecycleEvent { _, event ->
@@ -159,6 +161,11 @@ fun Config(navController: NavController, subId: Int) {
                 ) {
             moder.clearCarrierConfig()
             loadFlags()
+        }
+
+        StringPropertyView(label = stringResource(R.string.carrier_config), value = configuredCarrierConfig) {
+            moder.updateCarrierConfig(moder.KEY_CARRIER_NAME_STRING, it)
+            configuredCarrierConfig = it
         }
     }
 }
