@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Pixel IMS</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="home">Dom</string>
+    <string name="config">Konfiguracja</string>
+
+    <string name="running_latest_version">Biegasz na najnowszej wersji</string>
+    <string name="shizuku_service_running">Usługa Shizuku uruchomiona</string>
+    <string name="shizuku_permission_granted">Uprawnienia Shizuku przyznane</string>
+
+    <string name="enable_volte">Włącz VoLTE</string>
+    <string name="enable_vowifi">Włącz VoWiFi</string>
+    <string name="sim_detected">Wykryto SIM</string>
+    <string name="volte_supported_by_device">VoLTE obsługiwane przez urządzenie</string>
+    <string name="ims_status">IMS Status</string>
+    <string name="ims_status_for">IMS Status dla %1$s</string>
+    <string name="permissions_capabilities"><![CDATA[Uprawnienia i funkcje]]></string>
+    <string name="registered">Zarejestrowane</string>
+    <string name="unregistered">Niezarejestrowane</string>
+    <string name="newer_version_available">Nowsza wersja %1$s jest dostępna!</string>
+    <string name="toggles">Pstryczki</string>
+    <string name="enable_video_calling_vt">Włącz połączenia wideo (VT)</string>
+    <string name="show_4g_for_lte_data_icon">Pokaż 4G dla ikony danych LTE</string>
+    <string name="hide_enhanced_data_icon">Ukryj ikonę LTE Advanced</string>
+    <string name="enable_enhanced_4g_lte_lte_untested">Włącz LTE Advanced/LTE+ (Nietestowane)</string>
+    <string name="enable_vonr_untested">Włącz VoNR (Nietestowane)</string>
+    <string name="string_values">Wartości ciągów znaków</string>
+    <string name="miscellaneous">Różne</string>
+    <string name="reset_all_settings">Resetuj wszystkie ustawienia</string>
+    <string name="reverts_to_carrier_default">Przywrócenie domyślnych ustawień operatora</string>
+    <string name="user_agent">User Agent</string>
+    <string name="version">Wersja</string>
+    <string name="update_value">Wartość aktualizacji</string>
+    <string name="dismiss">Odrzuć</string>
+    <string name="confirm">Potwierdź</string>
+    <string name="yes">Tak</string>
+    <string name="no">Nie</string>
+</resources>
